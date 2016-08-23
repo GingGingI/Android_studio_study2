@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#FF333333"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/LOut1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="기회 :"
+            android:textSize="40dp"/>
+
+        <TextView
+            android:id="@+id/TxLife"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="40dp"
+            android:text="5"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:background="#FFDFDFDF"
+        android:layout_below="@+id/LOut1"
+        android:layout_above="@+id/LOut3"
+        android:id="@+id/LOut2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <TextView
+        android:gravity="center"
+        android:textSize="30dp"
+        android:textColor="#000000"
+        android:layout_weight="1"
+        android:id="@+id/TxV1"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:id="@+id/TxV2"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:id="@+id/TxV3"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:id="@+id/TxV4"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+
+        <TextView
+            android:gravity="center"
+            android:textSize="30dp"
+            android:textColor="#000000"
+            android:layout_weight="1"
+            android:id="@+id/TxV5"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LOut3"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:background="#FF555555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/PS1"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:hint="1번째"
+            android:textSize="30dp"
+            android:maxLength="1"
+            android:inputType="number"
+            android:lines="1"/>
+
+            <EditText
+                android:id="@+id/PS2"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:hint="2번째"
+                android:textSize="30dp"
+                android:maxLength="1"
+                android:inputType="number"
+                android:lines="1"/>
+
+            <EditText
+                android:id="@+id/PS3"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:hint="3번째"
+                android:textSize="30dp"
+                android:maxLength="1"
+                android:inputType="number"
+                android:lines="1"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/Btn_Choose"
+            android:layout_gravity="center"
+            android:textSize="30dp"
+            android:text="결정"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/View_Lose"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:background="#FFFFFFFF"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFaaaaaa"
+            android:gravity="center"
+            android:layout_gravity="top">
+            <TextView
+                android:id="@+id/LorWText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="패배"
+                android:textSize="35dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <Button
+                    android:id="@+id/Btn_Restart"
+                    android:layout_weight="1"
+                    android:text="재시작"
+                    android:textSize="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:onClick="onClick"/>
+                <Button
+                    android:id="@+id/Btn_Finish"
+                    android:layout_weight="1"
+                    android:text="나가기"
+                    android:textSize="30dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:onClick="onClick"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
