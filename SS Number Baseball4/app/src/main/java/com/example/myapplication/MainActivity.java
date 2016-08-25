@@ -115,6 +115,9 @@ public class MainActivity extends Activity implements OnClickListener {
         }
 
         if (v == Choose) {
+            if (PS1 == null || PS2 == null || PS3 == null) {
+                Toast.makeText(MainActivity.this, "값을 입력하세요", Toast.LENGTH_SHORT).show();
+            }
             if (PC1 == PC2 || PC2 == PC3 || PC3 == PC1) {
                 Toast.makeText(MainActivity.this, "같은숫자가 있습니다.", Toast.LENGTH_SHORT).show();
             }else {
@@ -147,27 +150,27 @@ public class MainActivity extends Activity implements OnClickListener {
 
             switch (life){
                 case 5 :
-                    TxV1.setText(Strike + "스트라이크, " + Ball + "볼, " + Out + "아웃.");
+                    TxV1.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike + "스트라이크, " + Ball + "볼, " + Out + "아웃.");
                     life--;
                     TxLife.setText("4");
                     break;
                 case 4 :
-                    TxV2.setText(Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
+                    TxV2.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
                     life--;
                     TxLife.setText("3");
                     break;
                 case 3 :
-                    TxV3.setText(Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
+                    TxV3.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
                     life--;
                     TxLife.setText("2");
                     break;
                 case 2 :
-                    TxV4.setText(Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
+                    TxV4.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
                     life--;
                     TxLife.setText("1");
                     break;
                 case 1 :
-                    TxV5.setText(Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
+                    TxV5.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike+"스트라이크, "+Ball+"볼, "+Out+"아웃.");
                     life--;
                     TxLife.setText("0");
                     break;
