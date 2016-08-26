@@ -144,9 +144,15 @@ public class MainActivity extends Activity implements OnClickListener {
                         if (PC3 == C2 || PC3 == C1) {
                             Ball++;
                         }
-                       if (Strike <= 0 && Ball <= 0) {
-                    Out = 1;
-                }
+                       if (PC1 != C1 && PC1 != C2 && PC1 != C3) {
+                           Out += 1;
+                        }
+                        if (PC2 != C1 && PC2 != C2 && PC2 != C3) {
+                            Out += 1;
+                        }
+                        if (PC3 != C1 && PC3 != C2 && PC3 != C3) {
+                            Out += 1;
+                        }
 
             switch (life){
                 case 5 :
