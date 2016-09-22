@@ -16,7 +16,7 @@ public class MainActivity extends Activity implements OnClickListener {
     int life = 5;
     int Rand;
     int C1 = 1, C2 = 3, C3 = 5;
-    int Strike = 0, Ball = 0, Out = 0;
+    int Strike = 0, Ball = 0, Out = 0 , Outcnt = 0;
     TextView TxLife, TxV1, TxV2, TxV3, TxV4, TxV5, LorW;
     Button Choose;
     Button Exit, Restart;
@@ -124,11 +124,9 @@ public class MainActivity extends Activity implements OnClickListener {
                         if (PC1 == C1) {
                             Strike++;
                         }
-
                         if (PC2 == C2) {
                             Strike++;
                         }
-
                         if (PC3 == C3) {
                             Strike++;
                         }
@@ -136,24 +134,27 @@ public class MainActivity extends Activity implements OnClickListener {
                         if (PC1 == C2 || PC1 == C3) {
                             Ball++;
                         }
-
                         if (PC2 == C1 || PC2 == C3) {
                             Ball++;
                         }
-
                         if (PC3 == C2 || PC3 == C1) {
                             Ball++;
                         }
+
                        if (PC1 != C1 && PC1 != C2 && PC1 != C3) {
-                           Out += 1;
+                           Outcnt += 1;
                         }
                         if (PC2 != C1 && PC2 != C2 && PC2 != C3) {
-                            Out += 1;
+                            Outcnt += 1;
                         }
                         if (PC3 != C1 && PC3 != C2 && PC3 != C3) {
-                            Out += 1;
+                            Outcnt += 1;
                         }
 
+                        if (Outcnt == 3){
+                            Out += 1;
+                            Outcnt = 0;
+                        }
             switch (life){
                 case 5 :
                     TxV1.setText("입력한 값 :"+PC1+PC2+PC3+"\n"+Strike + "스트라이크, " + Ball + "볼, " + Out + "아웃.");
@@ -196,6 +197,7 @@ public class MainActivity extends Activity implements OnClickListener {
             Strike = 0;
             Ball = 0;
             Out = 0;
+            Outcnt = 0;
         }
     }
 }
